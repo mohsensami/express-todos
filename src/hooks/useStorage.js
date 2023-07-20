@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { getDownloadURL, ref, uploadBytesResumable } from 'firebase/storage';
+import { getDownloadURL, ref, uploadBytesResumable } from 'fire';
 import { storage } from '../firebase/config';
 
 export const useStorage = (file) => {
@@ -13,7 +13,7 @@ export const useStorage = (file) => {
         const uploadTask = uploadBytesResumable(storageRef, file);
 
         uploadTask.on(
-            'state_change',
+            'state_changed',
             (snapshot) => {
                 const precentage = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
                 setProgress(precentage);

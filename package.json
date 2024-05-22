@@ -1,22 +1,22 @@
 {
-  "name": "@sami/shuffle",
-  "version": "1.0.0",
-  "description": "Shuffle Function",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/mohsensami/shuffle-npm-package.git"
-  },
-  "keywords": [
-    "shuffle"
-  ],
-  "author": "mohsen Sami",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/mohsensami/shuffle-npm-package/issues"
-  },
-  "homepage": "https://github.com/mohsensami/shuffle-npm-package#readme"
+    "name": "make-shuffle",
+    "version": "1.0.0",
+    "description": "Shuffle Function",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/mohsensami/shuffle-npm-package.git"
+    },
+    "keywords": [
+        "shuffle"
+    ],
+    "author": "mohsen Sami",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/mohsensami/shuffle-npm-package/issues"
+    },
+    "homepage": "https://github.com/mohsensami/shuffle-npm-package#readme"
 }

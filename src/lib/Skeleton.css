@@ -1,52 +1,10 @@
 .skeleton {
-  display: flex;
-  padding: 16px;
-  background: #fff;
-}
-
-.skeleton-content {
-  flex: 1;
-  margin-left: 16px;
-}
-
-.skeleton-avatar {
   background: #f0f0f0;
-  border-radius: 4px;
-}
-
-.skeleton-title {
-  background: #f0f0f0;
-  border-radius: 4px;
-  margin-bottom: 16px;
-}
-
-.skeleton-paragraph {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-
-.skeleton-paragraph-line {
-  background: #f0f0f0;
-  border-radius: 4px;
-}
-
-.skeleton-round .skeleton-avatar,
-.skeleton-round .skeleton-title,
-.skeleton-round .skeleton-paragraph-line {
-  border-radius: 50%;
-}
-
-.skeleton-active .skeleton-avatar,
-.skeleton-active .skeleton-title,
-.skeleton-active .skeleton-paragraph-line {
   position: relative;
   overflow: hidden;
 }
 
-.skeleton-active .skeleton-avatar::after,
-.skeleton-active .skeleton-title::after,
-.skeleton-active .skeleton-paragraph-line::after {
+.skeleton::after {
   content: "";
   position: absolute;
   top: 0;
@@ -60,6 +18,18 @@
     rgba(255, 255, 255, 0) 100%
   );
   animation: skeleton-loading 1.5s infinite;
+}
+
+.skeleton-text {
+  border-radius: 4px;
+}
+
+.skeleton-circle {
+  border-radius: 50%;
+}
+
+.skeleton-rect {
+  border-radius: 0;
 }
 
 @keyframes skeleton-loading {

@@ -1,4 +1,4 @@
-# @mohsensami/react-loading-skeleton
+# react-loading-skeleton
 
 A lightweight and customizable React component for creating loading skeleton screens. This package provides an easy way to implement loading states in your React applications with smooth animations and various shape options.
 

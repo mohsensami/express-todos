@@ -2,14 +2,19 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react-swc";
 import dts from "vite-plugin-dts";
 import { libInjectCss } from "vite-plugin-lib-inject-css";
-import path from "path";
+import { fileURLToPath } from "url";
+import { dirname, resolve } from "path";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
 export default defineConfig({
   build: {
     lib: {
-      entry: path.resolve(__dirname, "index.ts"),
-      name: "react-loading-skeleton",
-      fileName: (format) => `index.${format}.js`,
+      entry: resolve(__dirname, "index.ts"),
+      name: "ReactLoadingSkeleton",
+      fileName: (format) => `react-loading-skeleton.${format}.js`,
+      formats: ["es", "umd"],
     },
     rollupOptions: {
       external: ["react", "react-dom"],
@@ -17,6 +22,11 @@ export default defineConfig({
         globals: {
           react: "React",
           "react-dom": "ReactDOM",
+        },
+        assetFileNames: (assetInfo) => {
+          if (assetInfo.name === "style.css")
+            return "react-loading-skeleton.css";
+          return assetInfo.name || "unknown";
         },
       },
     },

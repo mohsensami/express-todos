@@ -1,6 +1,6 @@
 {
   "name": "@mohsensami/react-loading-skeleton",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "private": false,
   "description": "",
   "main": "./dist/react-loading-skeleton.umd.js",
@@ -41,10 +41,12 @@
   },
   "dependencies": {
     "path": "^0.12.7",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "vite-plugin-dts": "^3.9.1",
+    "vite-plugin-dts": "^4.5.4",
     "vite-plugin-lib-inject-css": "^2.1.1"
+  },
+  "peerDependencies": {
+    "react": "^16.8.0 || ^17.0.0 || ^18.0.0",
+    "react-dom": "^16.8.0 || ^17.0.0 || ^18.0.0"
   },
   "devDependencies": {
     "@types/react": "^18.2.66",

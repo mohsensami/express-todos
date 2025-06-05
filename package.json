@@ -1,22 +1,21 @@
 {
   "name": "@mohsensami/react-loading-skeleton",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "private": false,
   "description": "",
   "main": "./dist/react-loading-skeleton.umd.js",
   "module": "./dist/react-loading-skeleton.es.js",
-  "types": "./dist/index.d.ts",
+  "types": "dist/index.d.ts",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mohsensami/npm-skeleton"
   },
   "exports": {
     ".": {
-      "import": "./dist/react-loading-skeleton.es.js",
-      "require": "./dist/react-loading-skeleton.umd.js",
+      "import": "./dist/index.es.js",
+      "require": "./dist/index.umd.js",
       "types": "./dist/index.d.ts"
-    },
-    "./dist/style.css": "./dist/react-loading-skeleton.css"
+    }
   },
   "files": [
     "dist",
@@ -50,7 +49,6 @@
     "react-dom": "^16.8.0 || ^17.0.0 || ^18.0.0"
   },
   "devDependencies": {
-    "@types/node": "^22.15.29",
     "@types/react": "^18.2.66",
     "@types/react-dom": "^18.2.22",
     "@typescript-eslint/eslint-plugin": "^7.2.0",

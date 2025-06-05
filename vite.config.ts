@@ -8,8 +8,9 @@ export default defineConfig({
   build: {
     lib: {
       entry: path.resolve(__dirname, "index.ts"),
-      name: "react-loading-skeleton",
+      name: "ReactLoadingSkeleton",
       fileName: (format) => `index.${format}.js`,
+      formats: ["es", "umd"],
     },
     rollupOptions: {
       external: ["react", "react-dom"],
@@ -18,10 +19,22 @@ export default defineConfig({
           react: "React",
           "react-dom": "ReactDOM",
         },
+        assetFileNames: (assetInfo) => {
+          if (assetInfo.name === "style.css") return "index.css";
+          return assetInfo.name;
+        },
       },
     },
     sourcemap: true,
     emptyOutDir: true,
+    minify: true,
   },
-  plugins: [react(), dts(), libInjectCss()],
+  plugins: [
+    react(),
+    dts({
+      include: ["src/**/*"],
+      exclude: ["src/**/*.test.ts", "src/**/*.test.tsx"],
+    }),
+    libInjectCss(),
+  ],
 });

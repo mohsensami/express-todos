@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Toast } from "@mohsensami/react-to-print";
+import { Toast } from "@mohsensami/toast";
 
 function App() {
   const [showToast, setShowToast] = useState(false);

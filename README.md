@@ -37,13 +37,13 @@ function App() {
 
 ## Props
 
-| Name     | Type         | Default   | Description                       |
-| -------- | ------------ | --------- | --------------------------------- | ---------------------------- | -------- | ----------------------------------------- |
-| message  | `string`     | -         | The toast message (required)      |
-| type     | `"success"   | "error"   | "info"                            | "warning"`                   | `"info"` | The type of toast (different color/style) |
-| duration | `number`     | `3000`    | Display duration in milliseconds  |
-| onClose  | `() => void` | -         | Callback when the toast is closed |
-| position | `"top"       | "bottom"` | `"bottom"`                        | Toast position on the screen |
+| Name     | Type                                          | Default    | Description                               |
+| -------- | --------------------------------------------- | ---------- | ----------------------------------------- |
+| message  | `string`                                      | -          | The toast message (required)              |
+| type     | `"success" \| "error" \| "info" \| "warning"` | `"info"`   | The type of toast (different color/style) |
+| duration | `number`                                      | `3000`     | Display duration in milliseconds          |
+| onClose  | `() => void`                                  | -          | Callback when the toast is closed         |
+| position | `"top" \| "bottom"`                           | `"bottom"` | Toast position on the screen              |
 
 ## Examples
 

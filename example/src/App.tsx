@@ -12,6 +12,7 @@ function App() {
           message="عملیات با موفقیت انجام شد!"
           duration={4000}
           onClose={() => setShowToast(false)}
+          position="top"
         />
       )}
     </div>

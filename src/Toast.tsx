@@ -10,6 +10,7 @@ export interface ToastProps {
   duration?: number;
   onClose?: () => void;
   position?: ToastPosition;
+  rtl?: boolean;
 }
 
 export const Toast: React.FC<ToastProps> = ({
@@ -18,6 +19,7 @@ export const Toast: React.FC<ToastProps> = ({
   duration = 3000,
   onClose,
   position = "bottom",
+  rtl = false,
 }) => {
   const [visible, setVisible] = useState(true);
 
@@ -33,7 +35,10 @@ export const Toast: React.FC<ToastProps> = ({
   if (!visible) return null;
 
   return (
-    <div className={`toast toast-${type} toast-${position}`}>
+    <div
+      dir={`${rtl ? "rtl" : "ltr"}`}
+      className={`toast toast-${type} toast-${position}`}
+    >
       <span>{message}</span>
       <button
         className="toast-close"

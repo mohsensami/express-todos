@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Toast } from "@mohsensami/toast";
 
 function App() {
@@ -10,9 +10,10 @@ function App() {
       {showToast && (
         <Toast
           message="عملیات با موفقیت انجام شد!"
-          duration={4000}
+          duration={80000000}
           onClose={() => setShowToast(false)}
           position="top"
+          rtl={true}
         />
       )}
     </div>

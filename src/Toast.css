@@ -15,9 +15,6 @@
   min-width: 200px;
   justify-content: space-between;
   font-size: 14px;
-  transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  opacity: 0;
-  transform: translateX(-50%) translateY(-100%);
 }
 
 .toast.show {
@@ -64,4 +61,9 @@
 
 .toast-warning {
   background-color: #faad14;
+}
+
+.toast-rtl {
+  direction: rtl;
+  text-align: right;
 }

@@ -44,6 +44,7 @@ function App() {
 | duration | `number`                                      | `3000`     | Display duration in milliseconds          |
 | onClose  | `() => void`                                  | -          | Callback when the toast is closed         |
 | position | `"top" \| "bottom"`                           | `"bottom"` | Toast position on the screen              |
+| rtl      | `boolean`                                     | `false`    | Display toast in right-to-left (RTL) mode |
 
 ## Examples
 
@@ -75,6 +76,12 @@ function App() {
 
 ```jsx
 <Toast message="Top message" position="top" />
+```
+
+### RTL Toast
+
+```jsx
+<Toast message="پیام راست به چپ" rtl={true} />
 ```
 
 ## Styling

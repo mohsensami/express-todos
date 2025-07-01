@@ -15,6 +15,7 @@
   min-width: 200px;
   justify-content: space-between;
   font-size: 14px;
+  transition: opacity 0.3s, transform 0.3s;
 }
 
 .toast.show {
@@ -66,4 +67,16 @@
 .toast-rtl {
   direction: rtl;
   text-align: right;
+}
+
+.toast.hide {
+  opacity: 0;
+}
+
+.toast-top.hide {
+  transform: translateX(-50%) translateY(-100%);
+}
+
+.toast-bottom.hide {
+  transform: translateX(-50%) translateY(100%);
 }

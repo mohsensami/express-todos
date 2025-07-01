@@ -22,31 +22,37 @@ export const Toast: React.FC<ToastProps> = ({
   rtl = false,
 }) => {
   const [visible, setVisible] = useState(true);
+  const [hiding, setHiding] = useState(false);
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      setVisible(false);
-      onClose?.();
+      setHiding(true);
     }, duration);
-
     return () => clearTimeout(timer);
-  }, [duration, onClose]);
+  }, [duration]);
+
+  // Remove from DOM after animation
+  useEffect(() => {
+    if (hiding) {
+      const timeout = setTimeout(() => {
+        setVisible(false);
+        onClose?.();
+      }, 300); // match CSS transition duration
+      return () => clearTimeout(timeout);
+    }
+  }, [hiding, onClose]);
 
   if (!visible) return null;
 
   return (
     <div
       dir={`${rtl ? "rtl" : "ltr"}`}
-      className={`toast toast-${type} toast-${position}`}
+      className={`toast toast-${type} toast-${position} ${
+        hiding ? "hide" : "show"
+      }`}
     >
       <span>{message}</span>
-      <button
-        className="toast-close"
-        onClick={() => {
-          setVisible(false);
-          onClose?.();
-        }}
-      >
+      <button className="toast-close" onClick={() => setHiding(true)}>
         ×
       </button>
     </div>

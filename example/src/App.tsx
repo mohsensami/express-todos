@@ -10,7 +10,7 @@ function App() {
       {showToast && (
         <Toast
           message="عملیات با موفقیت انجام شد!"
-          duration={80000000}
+          duration={2000}
           onClose={() => setShowToast(false)}
           position="top"
           rtl={true}
